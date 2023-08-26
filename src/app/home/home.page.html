@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding-vertical">
+    <ion-card class="ion-text-center">
+      <ion-card-title>
+        <ion-label>
+          <h2>Inicio de Sesión</h2>
+        </ion-label>
+      </ion-card-title>
+
+      <ion-card-content>
+
+        <ion-item *ngIf="edad < 10">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text"[(ngModel)]="nom"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-card-content>
+      <ion-button shape="block" [routerLink]="['/pagina1']">Loguear</ion-button>
+      <ion-button shape="block" (click)="irPagina1()">Pagina1</ion-button>
+    </ion-card>
+
+  </div>
+  <app-componente1 nomb="vicente" apelli="Vera"></app-componente1>
+  <ion-item *ngFor="let x of lista">
+    <ion-label>{{x.nombre | uppercase}} - {{x.edad }}</ion-label>
+  </ion-item>
+  <div class="container">
+    <div class="track">
+      <ion-card id="card" button="true">
+        <ion-card-content>Card</ion-card-content>
+      </ion-card>
+    </div>
+  
+    <p>Drag the square along the track.</p>
+  </div>
+
+  <mat-spinner></mat-spinner>
+
+
+
+
+  <div class="container">
+    <div class="track">
+      <ion-card id="card" button="true">
+        <ion-card-content>Card</ion-card-content>
+      </ion-card>
+    </div>
+  
+    <p>Drag the square along the track.</p>
+  </div>
+</ion-content>
