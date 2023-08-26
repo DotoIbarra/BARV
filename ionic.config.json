@@ -1,0 +1,7 @@
+{
+  "name": "DesarroloSali",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
